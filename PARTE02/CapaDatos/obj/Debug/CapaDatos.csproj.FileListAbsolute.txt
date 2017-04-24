@@ -1,0 +1,5 @@
+C:\Users\pro\documents\visual studio 2013\Projects\PARTE02\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\pro\documents\visual studio 2013\Projects\PARTE02\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\pro\documents\visual studio 2013\Projects\PARTE02\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\pro\documents\visual studio 2013\Projects\PARTE02\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\pro\documents\visual studio 2013\Projects\PARTE02\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
