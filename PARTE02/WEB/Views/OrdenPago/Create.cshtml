@@ -1,0 +1,51 @@
+﻿@model  OrdenPago
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>OrdenPago</legend>
+
+        
+        @Html.HiddenFor(model=>model.idSucursal)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Monto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Monto)
+            @Html.ValidationMessageFor(model => model.Monto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Moneda)
+        </div>
+        <div class="editor-field">
+
+            @Html.DropDownList("Moneda")
+          
+            @Html.ValidationMessageFor(model => model.Moneda)
+        </div>
+
+ 
+     
+
+
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Regresar a la Lista", "Index", new { idSucursal = Model.idSucursal })
+</div>

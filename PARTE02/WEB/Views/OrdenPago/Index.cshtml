@@ -1,0 +1,64 @@
+﻿@model IEnumerable<OrdenPago>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Orden de Pago", "Create", new { idSucursal=ViewBag.idSucursal})
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idOrdenPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moneda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idOrdenPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moneda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.idOrdenPago }) |
+         
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.idOrdenPago, idSucursal=item.idSucursal })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Regresar al listado", "../Sucursal/Index")
+</div>

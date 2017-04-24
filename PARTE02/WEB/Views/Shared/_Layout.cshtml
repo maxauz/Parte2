@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "_Layout";
+}
+
+<h2>PARTE 2</h2>
+<table>
+    <td>@Html.ActionLink("Listado de Bancos", "../Banco/Index")</td></tr>
+           <tr><td>@Html.ActionLink("Sucursales y Ordenes de Pago", "../Sucursal/Index")</td></tr>
+           
+ 
+    <tr>
+        <td>@RenderBody()</td></tr>
+    </table>
+<br />
+<br />
+<br />
+<br />
+<h3>INDICACIONES</h3>
+<div>
+    Mantenimiento de Bancos esta en :Listado de Bancos.
+    Mantenimiento de Sucursales:Listado de Sucursales.
+    Mantenimiento de Orden de Pago: Esta dado por Sucursales, se elige la sucursal para generar la Orden de Pago.
+
+    
+</div>
+
+
+<h3>WEB API</h3>
+<div>
+    JSON:
+    api/OrdenPago/{Sucursal}/{TipoMoneda}:
+    api/OrdenPago/Sucursal1/s?type=json
+
+    XML:
+    api/Sucursal/{NombreBanco}:
+    api/Sucursal/Banco1
+</div>
